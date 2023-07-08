@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade</title>
+    <style>
+        /*Cor de fundo cinza*/
+        body{
+            background-color: gray;
+        }
+
+        /*Bloco principal*/
+        main{
+            background-color: white; /*Cor de fundo branco*/
+            padding: 10px; /*Prencimento de 10px*/
+            border-radius: 10px; /*Raio das bordas 10px*/
+            max-width: 800px; /*Maxima largura 800px*/
+            min-width: 300px; /*Minima largura 300px*/
+            margin: auto; /*Margem automatica - Centraliza o bloco*/
+        }
+        /*Bloco da imagem*/
+        img{
+            width: 100%; /*Largura sempre em 100%*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de Responsividade</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque asperiores iusto placeat libero cupiditate fugit quasi? Doloribus animi asperiores neque temporibus eius! Totam fugit iure in sequi mollitia aperiam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio dignissimos nesciunt repudiandae explicabo minus deserunt reprehenderit a consectetur distinctio suscipit odio, eligendi nam error blanditiis maiores illum? Necessitatibus, velit quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aspernatur, ab incidunt vitae commodi repudiandae nisi ex sequi vero delectus nostrum voluptates laborum cum temporibus neque autem sunt. Accusamus, ea?
+        </p>
+        <!--Bloco para imagens-->
+        <picture>
+            <!--Largura maxima 600px usara a imagem pequena-->
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <!--passando de 600px usura a imagem abaixo-->
+            <img src="imagens/irina-blok.jpg" alt="Irina blok">
+        </picture>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur neque asperiores iusto placeat libero cupiditate fugit quasi? Doloribus animi asperiores neque temporibus eius! Totam fugit iure in sequi mollitia aperiam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio dignissimos nesciunt repudiandae explicabo minus deserunt reprehenderit a consectetur distinctio suscipit odio, eligendi nam error blanditiis maiores illum? Necessitatibus, velit quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aspernatur, ab incidunt vitae commodi repudiandae nisi ex sequi vero delectus nostrum voluptates laborum cum temporibus neque autem sunt. Accusamus, ea?
+        </p>
+    </main>
+</body>
+</html>

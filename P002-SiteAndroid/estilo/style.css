@@ -1,0 +1,227 @@
+@charset "UTF-8";
+/*Importação da fonte do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+/*Configuração da fonte baixada*/
+@font-face{
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+/*Root: área de definição de variáveis globais CSS*/
+:root{
+    /*Variaveis de cores*/
+    --cor0: #ebe5c5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    /*Variaveis da fonte*/
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+/*Configuração em todas as tags*/
+*{  
+    margin: 0px; /*tamanho da margem*/
+    padding: 0px; /*Tamanho do preenchimento*/
+}
+
+/*Configuração do corpo*/
+body{
+    background-color: var(--cor0);/*cor de fundo*/
+    font-family: var(--font-padrao);/*Configuração da fonte*/
+}
+
+/*Configuração dos links com a classe externo, que acontecera depois*/
+a.externo::after {
+    content: '\1f517'; /*Adicionando um simbolo atraves de codico depois do conteudo dos links*/
+}
+
+/*Configuração de cabeçalho*/
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));/*corde fundo com imagem gradiente*/
+    min-height: 150px; /*Minima altura 150px*/
+    text-align: center; /*Alinhamento do texto no centro*/
+    padding-top: 40px;/*Preenchimento no top de 40px*/
+}
+
+/*Configurando todos h1 dentro do cabeçalho*/
+header > h1{
+    color: white;/*Cor da fonte*/
+    font-family: var(--fonte-destaque);/*Configuração da fonte*/
+    font-size: 3em; /*Tamnho da fonte*/
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);/*Sombra no texto*/
+}
+
+/*Condiguração de todas tags p dentro do cabeçalho*/
+header > p{
+    font-family: var(--font-padrao);/*Configuração da fonte*/
+    font-size: 1.2em; /*Tamanho da fonte*/
+    color: white; /*Cor da fonte*/
+    max-width: 500px; /*largura maxima 500px*/
+    padding-right: 10px; /*Preenchimento a direita de 10px*/
+    padding-left: 10px; /*Preenchimento a esquerda de 10px*/
+    margin: auto; /*Margem automatica*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);/*Sombra no texto*/
+}
+
+/*Confiuração do menu*/
+nav{
+    background-color: var(--cor5); /*Cor de Fundo*/
+    padding: 10px; /*Preenchimento de 10px*/
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.315);/*Sombra na caixa*/
+}
+
+/*Configurando as tag a dentro da tag nav*/
+nav > a{
+    color: var(--cor1); /*Cor da fonte*/
+    padding: 10px; /*Preenchimento de 10px*/
+    border-radius: 5px; /*Raios das bordas de 5px*/
+    text-decoration: none;/*Decoração do texto desligado*/
+    font-weight: bold; /*Fonte em negrito*/
+    transition-duration: 0.3s;
+}
+
+/*Configurando as tag a dentro da tag nav quando o mouse estiver sobre ele*/
+nav > a:hover{
+    background-color: var(--cor3);/*Cor de Fundo*/
+    color: var(--cor5);/*Cor da fonte*/
+}
+
+/*Configuração tag principal*/
+main{
+    min-width: 300px; /*Largura minima*/
+    max-width: 800px; /*Largura maxima*/
+    padding: 20px; /*Preenchimento de  20px*/
+    margin: auto; /*Margem automatica centralizando a tela*/
+    margin-bottom: 20px; /*Margem inferior de 20px*/
+    background-color: white; /*Cor de fundo*/
+    /*Sombra 0px de deslocamento x 0px deslocamento y 10px de espalhamento e cor preta*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39); 
+    border-bottom-left-radius: 10px; /*Raio da borda inferior esquerda 10px*/
+    border-bottom-right-radius: 10px;/*Raio da borda inferior direita 10px*/
+}
+
+/*Configuração da tag com a classe video*/
+div.video {
+    background-color: var(--cor5);/*Cor de fundo*/
+    margin: 0px -20px 30px -20px;/*Larguras da margem adaptando ao conteudo*/
+    padding: 20px;/*Preenchimento*/
+    padding-bottom: 59%;/*Preenchimento com porcentagem para tornar adoptavel*/
+    position: relative; /*A posição fica relativa*/
+}
+
+/*Configuração da tag iframe dentro da tag div com a classe video*/
+div.video > iframe {
+    position: absolute;/*Posição absoluta*/
+    top: 5%;/*Distancia do topo com porcentagem para tornar adaptavél*/
+    left: 5%;/*Distancia da lateral esquerda com porcentagem para tornar adaptavél*/
+    width: 90%; /*Largura de 90% para tornar adaptavél*/
+    height: 90%; /*Altura de 90% para tornar adaptavél*/
+}
+
+/*Configuração das tags h1 dentro da tag principal*/
+main h1{
+    color: var(--cor5); /*Cor da fonte*/
+    font-family: var(--fonte-android); /*Configuração da fonte*/
+}
+
+/*Configuração das tags h2 dentro da tag principal*/
+main h2{
+    font-family: var(--fonte-android); /*Configuração da fonte*/
+    color: var(--cor4);/*Cor do texto*/
+    font-size: 1.3em;/*Tamanho do texto*/
+    background-image: linear-gradient(to right, var(--cor1), transparent);/*corde fundo com imagem gradiente*/
+    text-indent: 8px;/*Afastamento da primeira palavra na primeira linha*/
+}
+/*Configurando os paragrafos dentro da tag principal*/
+main p{
+    margin: 15px 0px;/*Margem do top e base 15px margem lateral 0px*/
+    text-align: justify;/*Texto justificado a largura*/
+    text-indent: 30px;/*Afastamento da primeira palavra na primeira linha*/
+    line-height: 2em;/*Espaço entre linhas de 2em*/
+}
+
+/*Configurando as tags strong dentro da tag principal*/
+main strong{
+    color: var(--cor4);/*Cor da fonte*/
+    font-weight: bold;/*Fonte em negrito*/
+}
+
+/*Configurando os links dentro da tag principal*/
+main a{
+    text-decoration: none;/*Desligando a decoração dos links*/
+    font-weight: bold;/*Fonte em negrito*/
+    color: var(--cor5);/*Cor da fonte*/
+    background-color: var(--cor1);/*Cor de Fundo*/
+    padding: 2px 6px; /*Preenchimento de 2px no topo e base e 6px nas laterais*/
+}
+
+/*Configurando os links quando quando o mouse estiver sobre ele*/
+main a:hover{
+    text-decoration: underline;/*Decoração do texto linha embaixo*/
+    color: var(--cor4);/*Cor da fonte*/
+}
+
+/*Configuraçao das tags img dentro da tag principal*/
+main img{
+    width: 100%;/*Larguras das imagem sempre em 100%*/
+}
+
+/*Configuração das tags img com a classe pequena dentro da tag principal*/
+main img.pequena{
+    max-width: 350px; /*Largura maxima de 350px*/
+    display: block; /*Definindo a imagem como block*/
+    margin: auto; /*Margem automatica para centralizar*/
+}
+
+/*Configuração da tag aside*/
+aside{
+    background-color: var(--cor1);/*Cor de fundo*/
+    padding: 10px;/*Preenchimeto*/
+    border-radius: 10px;/*Raio das bordas*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.278);/*Configuração da sombra*/
+}
+
+/*Configuração das tags h3 dentro da tag aside*/
+aside > h3 {
+    background-color: var(--cor4);/*Cor de fundo*/
+    color: white;/*Cor da fonte*/
+    padding: 10px; /*Preenchimento*/
+    margin: -10px -10px 0px -10px; /*Margem com valores negativos para deslocamento externo*/
+    border-radius: 10px 10px 0px 0px;/*Raio da borda apenas na parte superior*/
+}
+
+/*Configura das tags ul (lista) dentro da tag aside*/
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';/*Configuração do tipo do marcador baseado nos codicos*/
+    list-style-position: inside;/*Marcadores na parte interna*/
+    columns: 2; /*numero de colunas*/
+}
+
+/*Configuração do rodapé*/
+footer{
+    background-color: var(--cor5); /* cor de fundo*/
+    color: white ; /*Cor da fonte*/
+    text-align: center;/*Alinhamento do texto ao centro*/
+    font-size: 0.8em;/*Tamanho do texto*/
+    padding: 5px;/*Preenchimento*/
+}
+
+/*Configuração dos links dentro do rodapé*/
+footer a{
+    color: white; /*Cor do texto*/
+    font-weight: bold;/*Texto em negrito*/
+    text-decoration: none;/*Decoração do texto desligado*/
+}
+
+/*Configuração dos links dentro do rodapé quando o mouse estiver sobre*/
+footer a:hover{
+    text-decoration: underline;/*Decoração do texto com linha embaixo*/
+    color: var(--cor1);
+}
