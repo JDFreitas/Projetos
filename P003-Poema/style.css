@@ -1,66 +1,66 @@
-@charset "UTF-8";
+@charset "UTF-8"; /*Codificação*/
 
-*{
-    margin: 0;
-    padding: 0;
+*{/*Configuração geral de toodas as tags*/
+    margin: 0;/*margem 0*/
+    padding: 0;/*preencimento 0*/
 }
-
+/*Configuração das tags hmtl e body (corpo)*/
 html, body{
-    min-height: 100vh; /*100% da altura da viewport*/
-    background-color: darkgray;
+    min-height: 100vh; /*100% da altura da viewport(hv representa viewport heigth*/
+    background-color: darkgray;/*Cor de fundo*/
 }
-
+/*Configuração do cabaçalho*/
 header{
-    background-color: black;
-    color: white;
-    text-align: center;
+    background-color: black;/*Cor de fundo*/
+    color: white;/*Cor da fonte*/
+    text-align: center;/*Alinhamento do texto*/
 }
-
+/*Configuração do titulo dentro do cabeçallho*/
 header > h1{
-    padding-top: 50px;
+    padding-top: 50px;/*Prenchimento no topo de 50px*/
     /*text-transform: uppercase; transformar tudo em letra maiscula*/
-    font-variant: small-caps;
+    font-variant: small-caps;/*Variação da fonte, todas maisculas com letras em destaque*/
 }
-
+/*Configuração do paragrafo dentro do cabeçalho*/
 header > p{
-    padding-bottom: 50px;
+    padding-bottom: 50px;/*Preenchimento em baixo de 50px*/
 }
-
+/*Configuração dos links dentro do rodapé*/
 footer a{
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
+    color: white;/*Cor da fonte*/
+    text-decoration: none;/*Decoração do texto desligado*/
+    font-weight: bolder;/*Fonte em negrito*/
 }
-
+/*Configuração dos links dentro do radapé quando o mouse estive sobre*/
 footer a:hover{
-    text-decoration: underline;
+    text-decoration: underline;/*Decoração do texto linha em baixo*/
 }
-
+/*Configuração das seções*/
 section{
-    padding: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
+    padding-top: 10vh;/*preenchimento no topo de 10% da altura da viewport*/
+    padding-bottom: 10vh;/*preenchimento da base de 10% da altura da viewport*/
+    line-height: 2em;/*altura entre as linhas*/
+    padding-left: 30px;/*preenchimento a esquerda de 30 pixel*/
 }
-
+/*Configuração das seções com a classe normal*/
 section.normal{
-    background-color: white;
-    color: black;
+    background-color: white;/*cor de fundo*/
+    color: black;/*cor da fonte*/
 }
-
+/*configuração das seções com a classe imagem*/
 section.imagem{
-    background-color: rgb(51, 51, 51);
-    color: white;
+    background-color: rgb(51, 51, 51);/*Cor de fundo*/
+    color: white;/*Cor da fonte*/
 }
-
+/*configuração dos paragrafos dentro das seções com a classe imagem*/
 section.imagem > p{
-    background-color: rgba(0, 0, 0, 0.245);
-    width: 400px;
+    background-color: rgba(0, 0, 0, 0.245);/*cor de fundo*/
+    width: 400px;/*Largura de 400 pixel*/
 }
-
+/*Configuração do rodapé*/
 footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    background-color: black;/*cor de fundo*/
+    color: white;/*cor da fonte*/
+    text-align: center;/*alinhamento do texto no centro*/
+    padding: 10px;/*preenchimento no geral de 10 pixel*/
 }
