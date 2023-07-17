@@ -1,13 +1,26 @@
 @charset "UTF-8"; /*Codificação*/
 
+/*Importação de fontes do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+/*Minhas variaveis*/
+:root{
+    --fonte01: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte02: 'Passion One', cursive;
+    --fonte03: 'Sriracha', cursive;
+}
+
 *{/*Configuração geral de toodas as tags*/
     margin: 0;/*margem 0*/
     padding: 0;/*preencimento 0*/
+    font-size: 1em;/*Tamanho da fonte 1 vezes ele mesmo (Padrão)*/
 }
 /*Configuração das tags hmtl e body (corpo)*/
 html, body{
     min-height: 100vh; /*100% da altura da viewport(hv representa viewport heigth*/
     background-color: darkgray;/*Cor de fundo*/
+    font-family: var(--fonte01);/*Familia de fonte com referência a minha variavel*/
 }
 /*Configuração do cabaçalho*/
 header{
@@ -20,6 +33,8 @@ header > h1{
     padding-top: 50px;/*Prenchimento no topo de 50px*/
     /*text-transform: uppercase; transformar tudo em letra maiscula*/
     font-variant: small-caps;/*Variação da fonte, todas maisculas com letras em destaque*/
+    font-family: var(--fonte02);/*Familia de fonte com referência a minha variavel*/
+    font-size: 8vw; /*Tamanho da fonte com 8% da larugura da viewport*/
 }
 /*Configuração do paragrafo dentro do cabeçalho*/
 header > p{
@@ -41,6 +56,8 @@ section{
     padding-bottom: 10vh;/*preenchimento da base de 10% da altura da viewport*/
     line-height: 2em;/*altura entre as linhas*/
     padding-left: 30px;/*preenchimento a esquerda de 30 pixel*/
+    font-family: var(--fonte03);/*Familia de fonte com referência a minha variavel*/
+    font-size: 3.0vw; /*Tamanho da fonte com 3,5% da larugura da viewport*/
 }
 /*Configuração das seções com a classe normal*/
 section.normal{
@@ -54,8 +71,8 @@ section.imagem{
 }
 /*configuração dos paragrafos dentro das seções com a classe imagem*/
 section.imagem > p{
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0.245);/*cor de fundo*/
-    width: 400px;/*Largura de 400 pixel*/
 }
 /*Configuração do rodapé*/
 footer{
