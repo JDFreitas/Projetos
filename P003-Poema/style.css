@@ -59,6 +59,11 @@ section{
     font-family: var(--fonte03);/*Familia de fonte com referência a minha variavel*/
     font-size: 3.0vw; /*Tamanho da fonte com 3,5% da larugura da viewport*/
 }
+/*Configurando os paragrafos dentros das seções*/
+section > p{
+    padding-bottom: 2em; /*Preenchimento na parte de baixo 2 vezes o tamanho normal*/
+}
+
 /*Configuração das seções com a classe normal*/
 section.normal{
     background-color: white;/*cor de fundo*/
@@ -68,12 +73,30 @@ section.normal{
 section.imagem{
     background-color: rgb(51, 51, 51);/*Cor de fundo*/
     color: white;/*Cor da fonte*/
+    background-position: right center;/*Posição da imgem no linha direita coluna centro*/
+    background-size: cover;/*Tamanho da imagem de fundo preechimento conforme a tela*/
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.531);/*Sombra interna na caixa da imagem*/
+    background-attachment: fixed;/*Fixação da imagem no fixo não rolar*/
 }
 /*configuração dos paragrafos dentro das seções com a classe imagem*/
 section.imagem > p{
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.245);/*cor de fundo*/
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.505);/*Sombra no texto*/
+
 }
+
+/*Configuração das seções com o id img01*/
+section#img01{
+    background-image: url(img/imagem01.jpg);/*Carregando imagem de fundo*/
+}
+
+/*Configuração das seções com o id img02*/
+section#img02{
+    background-image: url(img/imagem02.jpg);/*Carregando imagem de fundo*/
+    background-position: center center;/*Posição da imgem no linha centro coluna centro*/
+}
+
 /*Configuração do rodapé*/
 footer{
     background-color: black;/*cor de fundo*/
